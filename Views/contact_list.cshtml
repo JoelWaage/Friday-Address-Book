@@ -5,6 +5,16 @@
     <title>Contact List</title>
   </head>
   <body>
+    <h1>Here are your contacts: </h1>
+
+    <ul>
+      @foreach(var person in Model)
+      {
+        <li>@person.GetName()</li>
+        <li>@person.GetPhone()</li>
+        <li>@person.GetAddress()</li>
+      }
+    </ul>
 
   </body>
 </html>

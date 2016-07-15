@@ -5,6 +5,19 @@
     <title>Contact Created</title>
   </head>
   <body>
+    <h1>New Contact Added:</h1>
+
+    <ul>
+      <li><strong>@Model.GetName()</strong></li>
+      <ul>
+        <li>@Model.GetPhone()</li>
+        <li>@Model.GetAddress()</li>
+      </ul>
+    </ul>
+
+    <form action="/contact-list" method="get">
+      <button type="submit" name="contact-list">See List of Contacts</button>
+    </form>
 
   </body>
 </html>
