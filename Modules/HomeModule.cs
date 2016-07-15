@@ -20,9 +20,10 @@ namespace ContactSheet
       };
       Post["/name-added"] = _ => {
         Address newAddress = new Address(Request.Form["contact-street"], Request.Form["contact-apartment"], Request.Form["contact-city"], Request.Form["contact-state"], Request.Form["contact-zip"]);
-        Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], Request.Form["contact-address"]);
+
+        Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], newAddress);
         newContact.Save();
-        return View["contact_created.cshtml", newContact];
+        return View["contact_created.cshtml", newAddress];
       };
       Post["/contacts-deleted"] = _ => {
         Contact.ClearAll();
