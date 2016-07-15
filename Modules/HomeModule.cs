@@ -23,6 +23,10 @@ namespace ContactSheet
         newContact.Save();
         return View["contact_created.cshtml", newContact];
       };
+      Post["/contacts-deleted"] = _ => {
+        Contact.ClearAll();
+        return View["contacts_deleted.cshtml"];
+      };
 
     }
   }

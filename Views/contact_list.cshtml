@@ -13,8 +13,18 @@
         <li>@person.GetName()</li>
         <li>@person.GetPhone()</li>
         <li>@person.GetAddress()</li>
+        <br>
       }
     </ul>
+
+    <form action="/new-contact" method="get">
+      <button type="submit" name="make-new-contact">Add Another Contact</button>
+    </form>
+
+    <form action="/contacts-deleted" method="post">
+      <button type="submit" name="delete-contacts">Clear Contact</button>
+    </form>
+
 
   </body>
 </html>
