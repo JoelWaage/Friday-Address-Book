@@ -23,7 +23,7 @@ namespace ContactSheet
 
         Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phone"], newAddress);
         newContact.Save();
-        return View["contact_created.cshtml", newAddress];
+        return View["contact_created.cshtml", newContact];
       };
       Post["/contacts-deleted"] = _ => {
         Contact.ClearAll();

@@ -69,12 +69,14 @@ namespace ContactSheet.Objects
 //set strings, etc.
     private string _contactName;
     private string _contactPhone;
+    private object _contactAddress;
     private static List<Contact> _instances = new List<Contact> {};
 //constructor
     public Contact (string contactName, string contactPhone, object contactAddress)
     {
       _contactName = contactName;
       _contactPhone = contactPhone;
+      _contactAddress = contactAddress;
     }
 //getters and setters
     public void SetName(string newName)
@@ -93,6 +95,16 @@ namespace ContactSheet.Objects
     public string GetPhone()
     {
       return _contactPhone;
+    }
+
+    public void SetAddress(object newAddress)
+    {
+      _contactAddress = newAddress;
+    }
+
+    public object GetAddress()
+    {
+      return _contactAddress;
     }
 
     public static List<Contact> GetAll()
