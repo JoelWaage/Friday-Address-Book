@@ -9,25 +9,26 @@
   <body class="container">
 
     <h1>New Contact Added:</h1>
-
-    <ul>
-      <li id="getName"><strong>@Model.GetName()</strong></li>
-      <ul>
-        <li>Phone Number:</li>
+    <br>
+    <div class="rows">
+      <div class="jumbotron col-md-6 col-md-offset-2">
         <ul>
-          <li class="info"><strong>@Model.GetPhone()</strong></li>
+          <li id="getName"><strong>@Model.GetName():</strong></li>
+          <ul>
+            <li>Phone Number:</li>
+            <ul>
+              <li class="info"><strong>@Model.GetPhone()</strong></li>
+            </ul>
+            <li>Address:</li>
+            <ul>
+              <li class="info"><strong>@Model.GetAddress().GetStreet()</li>
+              <li class="info">@Model.GetAddress().GetApartment()</li>
+              <li class="info">@Model.GetAddress().GetCity(), @Model.GetAddress().GetState(), @Model.GetAddress().GetZip()</li>
+            </ul>
+          </ul>
         </ul>
-        <li>Address:</li>
-        <ul>
-          <li class="info"><strong>@Model.GetAddress().GetStreet()</li>
-          <li class="info">@Model.GetAddress().GetApartment()</li>
-          <li class="info">@Model.GetAddress().GetCity()</li>
-          <li class="info">@Model.GetAddress().GetState()</li>
-          <li class="info">@Model.GetAddress().GetZip()</strong></li>
-        </ul>
-      </ul>
-    </ul>
-
+      </div>
+    </div>
     <form action="/contact-list" method="get">
       <button type="submit" class="btn-lg btn-success btn-block" name="contact-list">See List of Contacts</button>
     </form>

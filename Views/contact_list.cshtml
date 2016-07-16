@@ -8,7 +8,8 @@
   </head>
   <body class="container">
     <h1>Here are your contacts: </h1>
-
+    <br>
+    <br>
     <ul>
       @foreach(var person in Model)
       {
@@ -22,11 +23,10 @@
           <ul>
             <li class="info"><strong>@person.GetAddress().GetStreet()</li>
             <li class="info">@person.GetAddress().GetApartment()</li>
-            <li class="info">@person.GetAddress().GetCity()</li>
-            <li class="info">@person.GetAddress().GetState()</li>
-            <li class="info">@person.GetAddress().GetZip()</strong></li>
+            <li class="info">@person.GetAddress().GetCity(), @person.GetAddress().GetState(), >@person.GetAddress().GetZip()</li>
           </ul>
         </ul>
+        <hr>
       }
     </ul>
 
