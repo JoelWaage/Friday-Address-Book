@@ -11,16 +11,20 @@
     <h1>New Contact Added:</h1>
 
     <ul>
-      <li><strong>@Model.GetName()</strong></li>
+      <li id="getName"><strong>@Model.GetName()</strong></li>
       <ul>
         <li>Phone Number:</li>
-        <li><strong>@Model.GetPhone()</strong></li>
+        <ul>
+          <li class="info"><strong>@Model.GetPhone()</strong></li>
+        </ul>
         <li>Address:</li>
-        <li><strong>@Model.GetAddress().GetStreet()</li>
-        <li>@Model.GetAddress().GetApartment()</li>
-        <li>@Model.GetAddress().GetCity()</li>
-        <li>@Model.GetAddress().GetState()</li>
-        <li>@Model.GetAddress().GetZip()</strong></li>
+        <ul>
+          <li class="info"><strong>@Model.GetAddress().GetStreet()</li>
+          <li class="info">@Model.GetAddress().GetApartment()</li>
+          <li class="info">@Model.GetAddress().GetCity()</li>
+          <li class="info">@Model.GetAddress().GetState()</li>
+          <li class="info">@Model.GetAddress().GetZip()</strong></li>
+        </ul>
       </ul>
     </ul>
 

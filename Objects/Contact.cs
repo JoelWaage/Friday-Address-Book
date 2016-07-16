@@ -15,6 +15,7 @@ namespace ContactSheet.Objects
     {
       _contactStreet = contactStreet;
       _contactApartment = contactApartment;
+      _contactCity = contactCity;
       _contactState = contactState;
       _contactZip = contactZip;
     }

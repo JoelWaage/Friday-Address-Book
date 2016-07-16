@@ -2,3 +2,15 @@ body {
   background-color:steelblue;
   color:white;
 }
+
+ul {
+  list-style-type: none;
+}
+
+#getName {
+  font-size: 1.5em;
+}
+
+.info {
+  font-size: 1.2em;
+}

@@ -12,10 +12,21 @@
     <ul>
       @foreach(var person in Model)
       {
-        <li>@person.GetName()</li>
-        <li>@person.GetPhone()</li>
-        <li>@person.GetAddress()</li>
-        <br>
+        <li id="getName"><strong>@person.GetName():</strong></li>
+        <ul>
+          <li>Phone Number:</li>
+          <ul>
+            <li class="info"><strong>@person.GetPhone()</strong></li>
+          </ul>
+          <li>Address:</li>
+          <ul>
+            <li class="info"><strong>@person.GetAddress().GetStreet()</li>
+            <li class="info">@person.GetAddress().GetApartment()</li>
+            <li class="info">@person.GetAddress().GetCity()</li>
+            <li class="info">@person.GetAddress().GetState()</li>
+            <li class="info">@person.GetAddress().GetZip()</strong></li>
+          </ul>
+        </ul>
       }
     </ul>
 
